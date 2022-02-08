@@ -7,6 +7,12 @@ a {
     text-decoration: none;
     color: #ca6be4;
 }
+
+.header-links a:hover {
+    background-color: #382f2f;
+    color: #fe67c4;
+}
+
 /*Header*/
 .header {
     display: flex;
@@ -17,26 +23,41 @@ a {
 
 .header-links {
     display: flex;
-    gap: 2vw;
+    gap: 0.5vw;
 }
+
+.header-links a {
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
 /*Intro*/
 .intro {
     display: flex;
     justify-content: center;
-    gap: 64px;
-    padding: 8px 384px;
+    align-items: center;
+    gap: 192px;
+    padding: 64px 384px;
 }
 
-.intro-headline {
+.intro-headline h1 {
     color: #ff66c4;
-    padding: 0px;
+    margin: auto;
+    font-size: 36px;
 }
 
 .intro-text {
     display: flex;
-    flex-direction: column;
-    width: 24vw;
+    flex-flow: column nowrap;
+    width: 20vw;
     gap: 12px;
+}
+
+.intro-subtext p{
+    margin: 0px;
+    font-size: 18px;
 }
 
 .intro-buttons {
@@ -45,13 +66,22 @@ a {
 }
 
 .intro-buttons button {
-    background-color: #c35070;
+    background-color: #b94062;
     border-radius: 6px;
     color: #f1eaec;
     border-style: none;
     padding: 8px 24px;
     font-size: 14px;
     font-weight: 600;
+    cursor: pointer;
+}
+
+.intro-buttons button:hover {
+    background-color: #ac3959;
+}
+
+.intro-buttons button:active {
+    transform: translateY(1px)
 }
 
 .intro-subtext {
@@ -65,12 +95,17 @@ a {
     position: relative;
 }
 
+.intro-img img {
+    border-radius: 8px;
+    border: 1px solid gray;
+}
+
 .overlay-text {
     position: absolute;
     height: 100%;
     width: 100%;
     top: 73%;
-    left: 8%;
+    left: 5%;
     bottom: 0;
     right: 0;
     opacity: 0;
@@ -78,6 +113,8 @@ a {
     color: whitesmoke;
     text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
     font-weight: 500;
+    height: auto;
+    width: auto;
 }
 
 .intro-img:hover .overlay-text {
@@ -87,8 +124,54 @@ a {
 .intro-img img:hover {
     filter: grayscale(0.5);
 }
+
 /*Additional Info*/
 .additional-info {
-    background-color: honeydew;
+    background-color: whitesmoke;
     padding: 8px 384px;
+}
+
+.additional-info h2 {
+    font-size: 32px;
+    text-align: center;
+    padding: 12px 0px;
+}
+
+.img-sub-1,
+.img-sub-3 {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    background-color: rgb(235, 235, 235);
+    padding: 12px;
+}
+
+.img-sub-2,
+.img-sub-4 {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-direction: row-reverse;
+    padding: 12px;
+}
+
+.img-subtext {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.img-p {
+    padding: 0px 0px;
+    margin: 0px;
+}
+
+.img-sub-1 img,
+.img-sub-2 img,
+.img-sub-3 img,
+.img-sub-4 img {
+    border-radius: 4px;
+    border: 2px solid gray;
 }
